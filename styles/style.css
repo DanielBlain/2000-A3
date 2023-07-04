@@ -1,70 +1,76 @@
 :root {
-    --background-color: white;
-    --text-color: black;
-    --primary-button: green;
-    --secondary-button: rgb(0, 108, 0);
-    --accent: magenta;
+	--background-color: white;
+	--text-color: black;
+	--primary-button: green;
+	--secondary-button: rgb(0, 108, 0);
+	--accent: magenta;
 }
 
 header,
 footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    border: 2px solid black;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	border: 2px solid black;
 }
-
 
 .main-grid {
-    display: grid;
-    grid-template-columns: 1fr;
+	display: grid;
+	grid-template-columns: 1fr;
 }
-.card{
-        display: flex;
-      flex-wrap: wrap;
-      flex-direction:column;  
-      background-color: rgb(243, 235, 225);
-    }
+.card {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	background-color: rgb(243, 235, 225);
+}
+.zero{
+    align-items: center;
+    display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	background-color: rgb(243, 235, 225);
+}
 
 /*only way to get ride of text decoration? tried doing it the normal way but it didnt work*/
-a:link{
-  text-decoration: none!important;
+a:link {
+	text-decoration: none !important;
 }
 
 @media (min-width: 20em) {
-    .main-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .card{
- /* Adjust the spacing between items */
+	.main-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.card {
+		align-items: center;
+		/* Adjust the spacing between items */
+	}
 }
-    }
-    /*making b bold size bigger*/
-    b{
-        font-size: 18px;
-    }
+/*making b bold size bigger*/
+b {
+	font-size: 18px;
 }
 
 @media (min-width: 40em) {
-    .main-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+	.main-grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
 }
 
 @media (min-width: 60em) {
-    .main-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
+	.main-grid {
+		grid-template-columns: repeat(4, 1fr);
+	}
 }
 
 @media (min-width: 80em) {
-    .main-grid {
-        grid-template-columns: repeat(5, 1fr);
-    }
+	.main-grid {
+		grid-template-columns: repeat(5, 1fr);
+	}
 }
 
 @media (min-width: 100em) {
-    .main-grid {
-        grid-template-columns: repeat(6, 1fr);
-    }
+	.main-grid {
+		grid-template-columns: repeat(6, 1fr);
+	}
 }
