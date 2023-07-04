@@ -13,10 +13,6 @@ footer {
     justify-content: space-between;
 }
 
-footer{
- border: 1px solid black;   
- background-color: rgba(255, 228, 196, 0.637);
-}
 
 .main-grid {
     display: grid;
@@ -26,6 +22,11 @@ footer{
 @media (min-width: 20em) {
     .main-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .card{
+      display: flex;
+      flex-direction:column;  
+      background-color: bisque;
     }
 }
 
