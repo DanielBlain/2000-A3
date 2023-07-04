@@ -11,6 +11,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    border: 2px solid black;
 }
 
 
@@ -19,14 +20,25 @@ footer {
     grid-template-columns: 1fr;
 }
 
+
+/*only way to get ride of text decoration? tried doing it the normal way but it didnt work*/
+a:link{
+  text-decoration: none!important;
+}
+
 @media (min-width: 20em) {
     .main-grid {
         grid-template-columns: repeat(2, 1fr);
     }
     .card{
+        font-size: 16px;
       display: flex;
+      flex-wrap: wrap;
       flex-direction:column;  
-      background-color: bisque;
+      background-color: rgb(243, 235, 225);
+    }
+    b{
+        font-size: 18px;
     }
 }
 
