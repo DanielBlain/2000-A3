@@ -19,7 +19,12 @@ footer {
     display: grid;
     grid-template-columns: 1fr;
 }
-
+.card{
+        display: flex;
+      flex-wrap: wrap;
+      flex-direction:column;  
+      background-color: rgb(243, 235, 225);
+    }
 
 /*only way to get ride of text decoration? tried doing it the normal way but it didnt work*/
 a:link{
@@ -31,12 +36,10 @@ a:link{
         grid-template-columns: repeat(2, 1fr);
     }
     .card{
-        font-size: 16px;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction:column;  
-      background-color: rgb(243, 235, 225);
+ /* Adjust the spacing between items */
+}
     }
+    /*making b bold size bigger*/
     b{
         font-size: 18px;
     }
