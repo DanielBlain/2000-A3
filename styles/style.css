@@ -10,6 +10,8 @@
 .main-grid {
     display: grid;
     grid-template-columns: 1fr;
+    grid-auto-rows: minmax(300px, auto); /* Set new rows to either 300px height if possible, or else to fit content */
+    grid-auto-flow: dense; /* Unused space? Fill it with 1x1 articles */
 }
 
 body {
@@ -75,6 +77,14 @@ nav ul {
 	padding: 0;
 	margin: 0;
 	list-style: none;
+}
+
+.main-grid .grid-2x1 {
+    grid-column-end: span 2;
+}
+
+.main-grid .grid-1x2 {
+    grid-row-end: span 2;
 }
 
 @media (min-width: 20em) {
