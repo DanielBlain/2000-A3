@@ -30,7 +30,7 @@ footer {
 .card {
 	/*work in progress will come back to it later check gpt histoy*/
 	display: flex;
-	align-items: flex-start;
+	flex-wrap: wrap;
 }
 .card a {
 	color: black;
