@@ -26,19 +26,28 @@ footer {
 .main-grid .grid-1x2 {
 	grid-row-end: span 2;
 }
-.card a{
+
+.card {
+	/*work in progress will come back to it later check gpt histoy*/
+	display: flex;
+	align-items: flex-start;
+}
+.card a {
 	color: black;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
-	background-color: rgb(243, 235, 225);
+	flex: 1;
 }
 .zero {
 	align-items: center;
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
-	background-color: rgb(243, 235, 225);
+	background-color: rgba(197, 194, 194, 0.849);
+}
+.footer-left{
+		
 }
 .svg-group {
 	display: flex;
@@ -50,24 +59,22 @@ footer {
 	margin-left: 5px; /* Adjust the value to control the spacing */
 }
 .svg-group .icon1 {
-  fill: rgb(0, 92, 212); 
-  stroke: rgb(214, 214, 255); 
+	fill: rgb(0, 92, 212);
+	stroke: rgb(214, 214, 255);
 }
 
 .svg-group .icon2 {
-  fill: rgb(13, 117, 253); 
-  stroke: rgb(214, 214, 255); 
+	fill: rgb(13, 117, 253);
+	stroke: rgb(214, 214, 255);
 }
 .svg-group .icon3 {
-  fill: rgb(140, 4, 252); 
-  stroke: rgb(255, 124, 1); 
+	fill: rgb(129, 5, 231);
+	stroke: rgb(255, 128, 8);
 }
 .svg-group .icon4 {
-  fill: rgb(182, 16, 5); 
-  stroke: rgb(214, 214, 255); 
+	fill: rgb(182, 16, 5);
+	stroke: rgb(214, 214, 255);
 }
-
-
 
 /*only way to get ride of text decoration? tried doing it the normal way but it didnt work*/
 a:link {
