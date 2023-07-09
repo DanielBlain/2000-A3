@@ -32,6 +32,7 @@ footer {
 	display: flex;
 	flex-wrap: wrap;
 }
+
 .card a {
 	color: black;
 	display: flex;
@@ -45,7 +46,7 @@ footer {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
-	background-color: rgba(197, 194, 194, 0.849);
+	background-color: rgba(218, 211, 211, 0.562);
 }
 .arts {
 	text-align: center;
@@ -104,6 +105,13 @@ b {
 	.main-grid {
 		grid-template-columns: repeat(3, 1fr);
 	}
+
+	.card{
+		align-items: center;
+    /* justify-content: center; */
+    display: flex;
+    flex-flow: row-reverse;
+	}
 }
 
 @media (min-width: 60em) {
@@ -112,7 +120,7 @@ b {
 	}
 
 	.card a {
-	
+		
 		align-items: center;
 		justify-content: center;
 	}
