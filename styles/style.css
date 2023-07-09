@@ -36,8 +36,9 @@ footer {
 	color: black;
 	display: flex;
 	flex-wrap: wrap;
-	flex-direction: column;
+	flex-direction: row;
 	flex: 1;
+	padding: 0.5rem 1rem;
 }
 .zero {
 	align-items: center;
@@ -46,8 +47,12 @@ footer {
 	flex-direction: column;
 	background-color: rgba(197, 194, 194, 0.849);
 }
-.footer-left{
-		
+.arts {
+	text-align: center;
+}
+.footer-left {
+	display: flex;
+	flex-wrap: wrap;
 }
 .svg-group {
 	display: flex;
@@ -87,7 +92,7 @@ a:link {
 	}
 	.card {
 		align-items: center;
-		/* Adjust the spacing between items */
+		justify-content: center;
 	}
 }
 /*making b bold size bigger*/
@@ -104,6 +109,12 @@ b {
 @media (min-width: 60em) {
 	.main-grid {
 		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.card a {
+	
+		align-items: center;
+		justify-content: center;
 	}
 }
 
