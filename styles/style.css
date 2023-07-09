@@ -79,12 +79,58 @@ nav ul {
 	list-style: none;
 }
 
+.grid-cell {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1rem;
+}
+
+.grid-cell:hover p {
+    opacity: 0.10;
+}
+
 .main-grid .grid-2x1 {
     grid-column-end: span 2;
 }
 
 .main-grid .grid-1x2 {
     grid-row-end: span 2;
+}
+
+.main-grid h2,
+.main-grid p {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+#vancouver-housing-prices-soar {
+    background-image: url(../images/overhead-shot-of-vancouver-houses-600x300.jpeg);
+    background-color: red;
+}
+
+#canada-day-celebrations {
+    background-image: url(../images/canada-day-celebrations-600x300.jpeg);
+    background-color: magenta;
+}
+
+#football-gaffe {
+    background-image: url(../images/football-gaffe-300x600.jpeg);
+    background-color: green;
+}
+
+#stressed-out-student {
+    background-image: url(../images/stressed-out-student-300x600.jpeg);
+    background-color: aqua;    
+}
+
+#obamas-back {
+    background-image: url(../images/obama-speaking-300x300.jpeg);
+    background-color: blue;
+}
+
+#vancouvers-rainy-weather {
+    background-image: url(../images/vancouver-rain-300x300.jpeg);
+    background-color: yellow;
 }
 
 @media (min-width: 20em) {
