@@ -4,6 +4,16 @@
 	--primary-button: green;
 	--secondary-button: rgb(0, 108, 0);
 	--accent: magenta;
+	/*Adding some variables in for me - cam */
+	--clr-primary: #304ffe;
+	--clr-primary-hover: #29e6a7;
+	--clr-primary-dark: #039d69;
+	--clr-gray100: #f0f7f8;
+	--clr--gray200: #cfd8dc;
+	--clr--gray400: #6b7e86;
+
+	/*border raiuds-cam*/
+	--radius: 0.2rem;
 }
 
 header,
@@ -24,6 +34,13 @@ footer {
 	grid-column-end: span 2;
 }
 .main-grid .grid-1x2 {
+	grid-row-end: span 2;
+}
+.grid-item-1{
+	display: grid;
+    /* grid-area: revert; */
+    grid-column: 3;
+    border: solid;
 	grid-row-end: span 2;
 }
 
@@ -58,7 +75,10 @@ footer {
 .svg-group {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-evenly;
+	flex-wrap: wrap;
+	align-items: center;
+	background-color: rgba(218, 211, 211, 0.562);
+	
 }
 .svg-group svg:not(:last-child) {
 	margin-right: 5px;
@@ -94,6 +114,9 @@ a:link {
 	.card {
 		align-items: center;
 		justify-content: center;
+	}
+	.svg-group{
+
 	}
 }
 /*making b bold size bigger*/
