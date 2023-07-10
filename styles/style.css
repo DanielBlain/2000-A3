@@ -39,68 +39,62 @@ footer {
 .main-grid .grid-1x2 {
 	grid-row-end: span 2;
 }
-.grid-item-1{
+.grid-item-1 {
 	display: grid;
 	overflow: hidden;
-    grid-column: 3;
-    border: 1px solid var(--clr--gray200);
-	box-shadow: 4px 4px var(--clr--gray200);	
+	grid-column: 3;
+	grid-row: span .5;
+	border: 1px solid var(--clr--gray200);
+	box-shadow: 4px 4px var(--clr--gray200);
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	cursor: pointer;
-	transition: border 200ms ease-in,
-	box-shadow 200ms ease-in;
-	&:hover{
-  border: 1px solid var(--clr-primary);
-	box-shadow: 8px 8px var(--clr-primary);	
-
+	transition: border 200ms ease-in, box-shadow 200ms ease-in;
+	&:hover {
+		border: 1px solid var(--clr-primary);
+		box-shadow: 8px 8px var(--clr-primary);
 	}
-
 }
-.grid-item-1 a{
+.grid-item-1 a {
 	padding: 1rem;
 	font-weight: bold;
 	color: var(--clr-primary);
 
-	&::after{
-		content:'\f061';
-		font-family: "Font Awesome 5 free";
+	&::after {
+		content: '\f061';
+		font-family: 'Font Awesome 5 free';
 		font-weight: 900;
 		position: relative;
-		left:0.5rem;
-
-	}	
-}
-.card-link{
-&:hover::after{
-	animation: arrow 1s ease-in-out infinite
-	alternate;
-
+		left: 0.5rem;
 	}
 }
-@keyframes arrow{
-	0%{
-		left:0.5rem;
-
+.card-link {
+	&:hover::after {
+		animation: arrow 1s ease-in-out infinite alternate;
 	}
-	100%{
-		left:1.5rem;
+}
+@keyframes arrow {
+	0% {
+		left: 0.5rem;
+	}
+	100% {
+		left: 1.5rem;
 	}
 }
 
-	.card-image{
-		height: 12rem;
-		width: 100%;
-		object-fit: cover;
-	}
-	.card-title{
-		padding: 1rem;
-		text-align: center;
-	}
-	.card-description{
-		padding: 0 1rem;
-	}
+.card-image {
+	height: 12rem;
+	width: 100%;
+	object-fit: cover;
+}
+.card-title {
+	padding: 1rem;
+	text-align: center;
+}
+.card-description {
+	padding: 0 1rem;
+}
 
 .card {
 	/*work in progress will come back to it later check gpt histoy*/
@@ -121,7 +115,7 @@ footer {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
-	background-color: rgba(218, 211, 211, 0.562);
+	background-color: rgba(169 161 161 / 56%);
 }
 .arts {
 	text-align: center;
@@ -135,8 +129,7 @@ footer {
 	flex-direction: row;
 	flex-wrap: wrap;
 	align-items: center;
-	background-color: rgba(218, 211, 211, 0.562);
-	
+	background-color: rgba(169 161 161 / 56%);
 }
 .svg-group svg:not(:last-child) {
 	margin-right: 5px;
@@ -167,14 +160,14 @@ a:link {
 
 @media (min-width: 20em) {
 	.main-grid {
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(1, 1fr);
 	}
 	.card {
 		align-items: center;
 		justify-content: center;
 	}
-	.svg-group{
-
+	.grid-item-1  {
+		grid-column: 2;
 	}
 }
 /*making b bold size bigger*/
@@ -187,11 +180,11 @@ b {
 		grid-template-columns: repeat(3, 1fr);
 	}
 
-	.card{
+	.card {
 		align-items: center;
-    /* justify-content: center; */
-    display: flex;
-    flex-flow: row-reverse;
+		/* justify-content: center; */
+		display: flex;
+		flex-flow: row-reverse;
 	}
 }
 
@@ -201,7 +194,6 @@ b {
 	}
 
 	.card a {
-		
 		align-items: center;
 		justify-content: center;
 	}
