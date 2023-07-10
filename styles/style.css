@@ -51,9 +51,44 @@ footer {
 	cursor: pointer;
 	transition: border 200ms ease-in,
 	box-shadow 200ms ease-in;
-	
+	&:hover{
+  border: 1px solid var(--clr-primary);
+	box-shadow: 8px 8px var(--clr-primary);	
+
+	}
 
 }
+.grid-item-1 a{
+	padding: 1rem;
+	font-weight: bold;
+	color: var(--clr-primary);
+
+	&::after{
+		content:'\f061';
+		font-family: "Font Awesome 5 free";
+		font-weight: 900;
+		position: relative;
+		left:0.5rem;
+
+	}	
+}
+.card-link{
+&:hover::after{
+	animation: arrow 1s ease-in-out infinite
+	alternate;
+
+	}
+}
+@keyframes arrow{
+	0%{
+		left:0.5rem;
+
+	}
+	100%{
+		left:1.5rem;
+	}
+}
+
 	.card-image{
 		height: 12rem;
 		width: 100%;
