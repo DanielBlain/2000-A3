@@ -107,7 +107,8 @@ footer {
 	}
 }
 /*down below is what i used for the arrow animation*/
-.grid-item-1 a {
+
+.main-grid a {
 	padding: 1rem;
 	font-weight: bold;
 	color: var(--clr-primary);
@@ -120,10 +121,12 @@ footer {
 		left: 0.5rem;
 	}
 }
+
 .card-link {
 	&:hover::after {
 		animation: arrow 1s ease-in-out infinite alternate;
 	}
+
 }
 @keyframes arrow {
 	0% {
