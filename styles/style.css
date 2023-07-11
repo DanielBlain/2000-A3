@@ -11,6 +11,7 @@
 	--clr-gray100: #f0f7f8;
 	--clr--gray200: #cfd8dc;
 	--clr--gray400: #6b7e86;
+	--clr--red100: rgb(255, 17, 0);
 
 	/*border raiuds-cam*/
 	--radius: 0.2rem;
@@ -42,8 +43,7 @@ footer {
 .grid-item-1 {
 	display: grid;
 	overflow: hidden;
-	grid-column: 3;
-	grid-row: span .5;
+	grid-row: span 1;
 	border: 1px solid var(--clr--gray200);
 	box-shadow: 4px 4px var(--clr--gray200);
 	display: flex;
@@ -53,9 +53,60 @@ footer {
 	transition: border 200ms ease-in, box-shadow 200ms ease-in;
 	&:hover {
 		border: 1px solid var(--clr-primary);
-		box-shadow: 8px 8px var(--clr-primary);
+		box-shadow: 8px 8px var(--clr--red100);
 	}
 }
+.grid-item-5 {
+	display: grid;
+	overflow: hidden;
+	grid-row: span 1;
+	border: 1px solid var(--clr--gray200);
+	box-shadow: 4px 4px var(--clr--gray200);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	cursor: pointer;
+	transition: border 200ms ease-in, box-shadow 200ms ease-in;
+	&:hover {
+		border: 1px solid var(--clr-primary);
+		box-shadow: 8px 8px var(--clr--red100);
+	}
+}
+.grid-item-3 {
+	display: grid;
+	overflow: hidden;
+	
+	grid-row: span 1;
+	border: 1px solid var(--clr--gray200);
+	box-shadow: 4px 4px var(--clr--gray200);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	cursor: pointer;
+	transition: border 200ms ease-in, box-shadow 200ms ease-in;
+	&:hover {
+		border: 1px solid var(--clr-primary);
+		box-shadow: 8px 8px var(--clr--red100);
+	}
+}
+.grid-item-2 {
+	display: grid;
+	overflow: hidden;
+	grid-column: 1;
+	grid-row: span 1;
+	border: 1px solid var(--clr--gray200);
+	box-shadow: 4px 4px var(--clr--gray200);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	cursor: pointer;
+	transition: border 200ms ease-in, box-shadow 200ms ease-in;
+	&:hover {
+		border: 1px solid var(--clr-primary);
+		box-shadow: 8px 8px var(--clr--red100);
+	}
+}
+/*down below is what i used for the arrow animation*/
 .grid-item-1 a {
 	padding: 1rem;
 	font-weight: bold;
@@ -159,15 +210,27 @@ a:link {
 }
 
 @media (min-width: 20em) {
-	.main-grid {
-		grid-template-columns: repeat(1, 1fr);
+	.main-grid  {
+		grid-template-columns: repeat(1, 4fr);
 	}
 	.card {
 		align-items: center;
 		justify-content: center;
 	}
 	.grid-item-1  {
-		grid-column: 2;
+		grid-column: 1;
+	}
+	.grid-item-2  {
+		grid-column: 1;
+	}
+		.grid-item-3  {
+		grid-column: 1;
+	}
+		.grid-item-4  {
+		grid-column: 1;
+	}
+		.grid-item-5  {
+		grid-column: 1;
 	}
 }
 /*making b bold size bigger*/
@@ -185,6 +248,21 @@ b {
 		/* justify-content: center; */
 		display: flex;
 		flex-flow: row-reverse;
+	}
+	.grid-item-1  {
+		grid-column: 1;
+	}
+	.grid-item-2  {
+		grid-column: 2;
+	}
+		.grid-item-3  {
+		grid-column: 3;
+	}
+		.grid-item-4  {
+		grid-column: 3;
+	}
+		.grid-item-5  {
+		grid-column: 2;
 	}
 }
 
