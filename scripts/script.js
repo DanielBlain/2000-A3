@@ -28,22 +28,12 @@ const weather = {
     precipitation: $('#precipitation'),
     temperature: $('.temperature p'),
     degrees: 'celsius',
-    displayWeather: function(day) {
-        this.weekdayDisplay.text(day.name);
-        if (day.weather === 'sunny') {
-            weather.weatherImage.attr({src:'images/sunny.svg', alt: 'sunny'});
-        }
-        else if (day.weather === 'cloudy') {
-            weather.weatherImage.attr({src:'images/sunny_cloudy.png', alt: 'cloudy'});
-        }
-        else if (day.weather === 'rainy') {
-            weather.weatherImage.attr({src:'images/rainy.svg', alt: 'rainy'});
-        }
-        this.precipitation.text(day.precipitationValue);
-        weather.temperature.text(day.temp);
+    currentObject: '',
+    displayOnLoad: function(day) {
+        displayWeather(day);
     },
     determineDay: function(index){
-        this.displayWeather(weekdays[index]);
+        this.displayOnLoad(weekdays[index]);
     },
 }
 
@@ -53,8 +43,8 @@ $('.expand').removeClass('expanded');
 weekDisplay(weekOrder());
 
 $('.celsius').on('click', () => {
-    weather.temperature.text(weekdays[index].temp);
-    weather.degrees = 'celcius';
+    weather.degrees = 'celsius';
+    unitConversion(weather.currentObject);
     if ($('.celsius').hasClass('degree-inactive') === true) {
         $('.celsius').toggleClass("degree-active degree-inactive");
         $('.fahrenheit').toggleClass("degree-active degree-inactive");
@@ -62,9 +52,8 @@ $('.celsius').on('click', () => {
 });
 
 $('.fahrenheit').on('click', () => {
-    let fahrenheit = Math.round(weekdays[index].temp * 1.8 + 32);
-    weather.temperature.text(fahrenheit);
     weather.degrees = 'fahrenheit';
+    unitConversion(weather.currentObject);
     if ($('.fahrenheit').hasClass('degree-inactive') === true) {
         $('.celsius').toggleClass("degree-active degree-inactive");
         $('.fahrenheit').toggleClass("degree-active degree-inactive");
@@ -72,9 +61,12 @@ $('.fahrenheit').on('click', () => {
 });
 
 $('.expand').on('click', () => {
-    $('.weekday-menu').toggleClass('expanded');
-    $('.expand').toggleClass('expanded');
+    if ($('.expand').hasClass('expanded') === true) {
+        weather.determineDay(index);
+    }
+    $('.weekday-menu, .expand').toggleClass('expanded');
 });
+
 
 function weekOrder() {
     let order = weekdays;
@@ -85,7 +77,6 @@ function weekOrder() {
         else {
             order.unshift;
             order.push(day);
-
         }
     }
 }
@@ -96,9 +87,45 @@ function weekDisplay(array) {
         $('.weather-tab').each(function() {
             if ($(this).hasClass(object.name) === true) {
                 $(this).css('order', orderNum);
-                console.log(orderNum);
                 orderNum+=1;
+                $(this).on('click', () => {
+                    displayWeather(object);
+                });
+                $(this).hover(
+                    function() {
+                        $(this).css('background-color', 'var(--clr--gray200)');
+                    }, 
+                    function() {
+                        $(this).css('background-color', 'var(--clr-gray100)');
+                    }
+                );
             }
         });
+    }
+}
+
+function displayWeather(object) {
+    weather.currentObject = object;
+    weather.weekdayDisplay.text(object.name);
+    if (object.weather === 'sunny') {
+        weather.weatherImage.attr({src:'images/sunny.svg', alt: 'sunny'});
+    }
+    else if (object.weather === 'cloudy') {
+        weather.weatherImage.attr({src:'images/sunny_cloudy.png', alt: 'cloudy'});
+    }
+    else if (object.weather === 'rainy') {
+        weather.weatherImage.attr({src:'images/rainy.svg', alt: 'rainy'});
+    }
+    weather.precipitation.text(object.precipitationValue);
+    unitConversion(object);
+}
+
+function unitConversion(object) {
+    if (weather.degrees === 'celsius') {
+        weather.temperature.text(object.temp);
+    }
+    else if (weather.degrees === 'fahrenheit') {
+        let fahrenheit = Math.round(object.temp * 1.8 + 32);
+        weather.temperature.text(fahrenheit);
     }
 }
