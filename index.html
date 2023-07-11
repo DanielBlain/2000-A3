@@ -31,13 +31,51 @@
         <div style="background-color: aqua">
             a;lsdkfj;alsdfja
         </div>
-        <div style="background-color: magenta">
-            a;lsdkfj;alsdfja
+        <div class="weather-panel">
+            <div class="weather-card">
+                <p class="capitalize weekday">sunday</p>
+                <div class="weather-image-wrapper"><img class="weather-image"src="images/sunny.svg" alt="sunny" width="100px"></div>
+                <div class="weather-info">
+                    <p class="capitalize">precipitation: <span id="precipitation">10</span>%</p>
+                    <div class="temperature">
+                        <p>18</p>
+                        <button class="capitalize celsius degree-active">&deg;c</button>
+                        <button class="capitalize fahrenheit degree-inactive">&deg;f</button>
+                    </div>
+                </div>
+            </div>
+            <div class="weekday-menu expanded">
+                <div class="weather-tab monday">
+                    <p class="capitalize">monday</p>
+                    <img src="images/sunny.svg" width="50px" alt="sunny">
+                </div>
+                <div class="weather-tab tuesday">
+                    <p class="capitalize">tuesday</p>
+                    <img src="images/sunny.svg" width="50px" alt="sunny">
+                </div>
+                <div class="weather-tab wednesday">
+                    <p class="capitalize">wednesday</p>
+                    <img src="images/sunny_cloudy.png" width="50px" alt="cloudy">
+                </div>
+                <div class="weather-tab thursday">
+                    <p class="capitalize">thursday</p>
+                    <img src="images/sunny.svg" width="50px" alt="sunny">
+                </div>
+                <div class="weather-tab friday">
+                    <p class="capitalize">friday</p>
+                    <img src="images/rainy.svg" width="50px" alt="rainy">
+                </div>
+                <div class="weather-tab saturday">
+                    <p class="capitalize">saturday</p>
+                    <img src="images/rainy.svg" width="50px" alt="rainy">
+                </div>
+                <div class="weather-tab sunday">
+                    <p class="capitalize">sunday</p>
+                    <img src="images/sunny.svg" width="50px" alt="sunny">
+                </div>
+                <div class="expand expanded"><img src="images/down_chevron.svg"></div>
+            </div>
         </div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
     </main>
 
     <footer>
@@ -48,10 +86,7 @@
         <div class="footer-left">
             Lorem ipsum dolor, sit 
         </div>
-        <div class="footer-right">
-            Lorem ipsum dolor, sit
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-.139 9.237c.209 4.617-3.234 9.765-9.33 9.765-1.854 0-3.579-.543-5.032-1.475 1.742.205 3.48-.278 4.86-1.359-1.437-.027-2.649-.976-3.066-2.28.515.098 1.021.069 1.482-.056-1.579-.317-2.668-1.739-2.633-3.26.442.246.949.394 1.486.411-1.461-.977-1.875-2.907-1.016-4.383 1.619 1.986 4.038 3.293 6.766 3.43-.479-2.053 1.08-4.03 3.199-4.03.943 0 1.797.398 2.395 1.037.748-.147 1.451-.42 2.086-.796-.246.767-.766 1.41-1.443 1.816.664-.08 1.297-.256 1.885-.517-.439.656-.996 1.234-1.639 1.697z"/></svg> 
-        </div>
+        
     </footer>
 
     <!-- Link jQuery -->

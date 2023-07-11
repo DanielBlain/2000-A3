@@ -4,6 +4,14 @@
     --primary-button: green;
     --secondary-button: rgb(0, 108, 0);
     --accent: magenta;
+    --clr-primary: #304FFE;
+    --clr-primary-hover: #29E6A7;
+    --clr-primary-dark: #039D69;
+    --clr-gray100: #F0F7F8;
+    --clr--gray200: #CFD8DC;
+    --clr--gray400: #6B7E86;
+    /*border raiuds-cam*/
+    --radius: 0.2rem;
 }
 
 header,
@@ -17,8 +25,138 @@ footer {
 .main-grid {
     display: grid;
     grid-template-columns: 1fr;
+    grid-auto-rows: minmax(300px, auto); /* Set new rows to either 300px height if possible, or else to fit content */
+    grid-auto-flow: dense; /* Unused space? Fill it with 1x1 articles */
 }
 
+.main-grid .grid-2x1 {
+    grid-column-end: span 2;
+}
+.main-grid .grid-1x2 {
+    grid-row-end: span 2;
+}
+
+.weather-panel {
+    background-color: var(--background-color);
+    border: solid 1px black;
+    
+}
+
+.weather-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border: solid 1px black;
+    padding-bottom: 15px;
+    background-color: beige;
+    z-index: 16;
+    position: relative;
+}
+
+.weather-card div {
+    width: 80%;
+}
+
+.weekday {
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+.weather-image-wrapper {
+    padding: 1rem 4rem;
+    border: solid 1px black;
+    background-color: lightskyblue;
+}
+
+.weather-info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-size: 1.2rem;
+}
+
+.temperature {
+    display: flex;
+}
+
+.temperature p{
+    font-weight: bold;
+    font-size: 3rem;
+    display: inline;
+    margin:0 10px 0 0;
+}
+
+.temperature button {
+    width: 55px;
+    height: 50px;
+    margin-right: 10px;
+    padding: 0 20px 0 10px;
+}
+
+.degree-active {
+    background-color: var(--accent);
+}
+
+.degree-inactive{
+    background-color: whitesmoke;
+}
+
+
+.weekday-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    z-index: 1;
+    transform: translateY(-362px);
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+
+.weekday-menu.expanded {
+    transform: translateY(0px);
+}
+
+.expand.expanded img {
+    transform: rotate(180deg);
+    transition: all 0.5s ease-in-out;
+}
+
+.weather-tab {
+    display: flex;
+    border: solid 1px black;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weather-tab p {
+    font-size: 2rem;
+    margin:0 0 0 20px;
+}
+
+.weather-tab img {
+    margin-right: 30px;
+}
+
+
+
+.expand {
+    width: 100%;
+    border: solid 1px black;
+    text-align: center;
+    background-color: whitesmoke;
+    order: 30;
+}
+
+.expand:active {
+    background-color: lightgray;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
 @media (min-width: 20em) {
     .main-grid {
         grid-template-columns: repeat(2, 1fr);
