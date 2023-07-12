@@ -75,7 +75,7 @@ footer {
 .grid-item-3 {
 	display: grid;
 	overflow: hidden;
-	
+
 	grid-row: span 1;
 	border: 1px solid var(--clr--gray200);
 	box-shadow: 4px 4px var(--clr--gray200);
@@ -126,7 +126,6 @@ footer {
 	&:hover::after {
 		animation: arrow 1s ease-in-out infinite alternate;
 	}
-
 }
 @keyframes arrow {
 	0% {
@@ -213,26 +212,26 @@ a:link {
 }
 
 @media (min-width: 20em) {
-	.main-grid  {
+	.main-grid {
 		grid-template-columns: repeat(1, 4fr);
 	}
 	.card {
 		align-items: center;
 		justify-content: center;
 	}
-	.grid-item-1  {
+	.grid-item-1 {
 		grid-column: 1;
 	}
-	.grid-item-2  {
+	.grid-item-2 {
 		grid-column: 1;
 	}
-		.grid-item-3  {
+	.grid-item-3 {
 		grid-column: 1;
 	}
-		.grid-item-4  {
+	.grid-item-4 {
 		grid-column: 1;
 	}
-		.grid-item-5  {
+	.grid-item-5 {
 		grid-column: 1;
 	}
 }
@@ -252,19 +251,19 @@ b {
 		display: flex;
 		flex-flow: row-reverse;
 	}
-	.grid-item-1  {
+	.grid-item-1 {
 		grid-column: 1;
 	}
-	.grid-item-2  {
+	.grid-item-2 {
 		grid-column: 2;
 	}
-		.grid-item-3  {
+	.grid-item-3 {
 		grid-column: 3;
 	}
-		.grid-item-4  {
+	.grid-item-4 {
 		grid-column: 3;
 	}
-		.grid-item-5  {
+	.grid-item-5 {
 		grid-column: 2;
 	}
 }
@@ -277,6 +276,9 @@ b {
 	.card a {
 		align-items: center;
 		justify-content: center;
+	}
+	.grid-item-5 {
+		grid-column: 4;
 	}
 }
 
