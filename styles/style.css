@@ -1,10 +1,13 @@
+
+/*
+
 :root {
 	--background-color: white;
 	--text-color: black;
 	--primary-button: green;
 	--secondary-button: rgb(0, 108, 0);
 	--accent: magenta;
-	/*Adding some variables in for me - cam */
+	/*Adding some variables in for me - cam 
 	--clr--primary: #304ffe;
 	--clr--primary-hover: #29e6a7;
 	--clr--primary-dark: #039d69;
@@ -13,7 +16,7 @@
 	--clr--gray400: #6b7e86;
 	--clr--red100: rgb(255, 17, 0);
 
-	/*border raiuds-cam*/
+	/*border raiuds-cam
 	--radius: 0.2rem;
 }
 
@@ -28,9 +31,9 @@ footer {
 .main-grid {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-auto-rows: minmax(300px, auto); /* Dan's code Set new rows to either 300px height if possible, or else to fit content */
-	grid-auto-flow: dense; /* Unused space? Fill it with 1x1 articles */
-	/*cams code below for grid*/
+	grid-auto-rows: minmax(300px, auto); /* Dan's code Set new rows to either 300px height if possible, or else to fit content 
+	grid-auto-flow: dense; /* Unused space? Fill it with 1x1 articles 
+	/*cams code below for grid
 	grid-gap: 1.5rem;
 	justify-content: center;
 }
@@ -106,7 +109,7 @@ footer {
 		box-shadow: 8px 8px var(--clr--primary-hover);
 	}
 }
-/*down below is what i used for the arrow animation*/
+/*down below is what i used for the arrow animation
 
 .main-grid a {
 	padding: 1rem;
@@ -150,7 +153,7 @@ footer {
 }
 
 .card {
-	/*work in progress will come back to it later check gpt histoy*/
+	/*work in progress will come back to it later check gpt histoy
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -182,11 +185,11 @@ footer {
 	flex-direction: row;
 	flex-wrap: wrap;
 	align-items: center;
-	background-color:  rgba(223, 216, 216, 0.74);
+	background-color: rgba(223, 216, 216, 0.74);
 }
 .svg-group svg:not(:first-child) {
 	margin-right: 2px;
-	margin-left: 1px; /* Adjusting the size for logos */
+	margin-left: 1px; /* Adjusting the size for logos 
 }
 .svg-group .icon1 {
 	fill: rgb(0, 92, 212);
@@ -206,7 +209,7 @@ footer {
 	stroke: rgb(214, 214, 255);
 }
 
-/*only way to get ride of text decoration? tried doing it the normal way but it didnt work*/
+/*only way to get ride of text decoration? tried doing it the normal way but it didnt work
 a:link {
 	text-decoration: none !important;
 }
@@ -234,9 +237,8 @@ a:link {
 	.grid-item-5 {
 		grid-column: 1;
 	}
-	
 }
-/*making b bold size bigger*/
+/*making b bold size bigger
 b {
 	font-size: 18px;
 }
@@ -248,7 +250,7 @@ b {
 
 	.card {
 		align-items: center;
-		/* justify-content: center; */
+		/* justify-content: center; 
 		display: flex;
 		flex-flow: row-reverse;
 	}
@@ -294,3 +296,4 @@ b {
 		grid-template-columns: repeat(6, 1fr);
 	}
 }
+*/
