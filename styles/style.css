@@ -1,10 +1,15 @@
 :root {
-    --background-color: white;
-    --text-color: black;
-    --primary-button: green;
-    --secondary-button: rgb(0, 108, 0);
-    --accent: magenta;
-    --header-background: rgb(15, 103, 15);
+    /* Color scheme */
+    --clr-primary: #304FFE;
+    --clr-primary-hover: #29E6A7;
+    --clr-primary-dark: #039D69;
+    --clr-gray100: #F0F7F8;
+    --clr-gray200: #CFD8DC;
+    --clr-gray400: #6B7E86;
+    --clr-black: black;
+
+    /*Border radius*/
+    --radius: 0.2rem;
 }
 
 .main-grid {
@@ -15,13 +20,13 @@
 }
 
 body {
-    background-color: var(--background-color);
+    background-color: var(--clr-gray100);
 }
 
 header {
     position: sticky;
     top: 0;
-    background-color: var(--header-background);
+    background-color: var(--clr-gray400);
     text-align: center;
 }
 
@@ -30,8 +35,51 @@ header {
     display: block;
 }
 
-.banner-title {
+.header-left {
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.banner-block {
     font-size: 3rem;
+    position: relative; /* To allow positioning of children */
+}
+
+.banner-border-4 {
+    position: absolute;
+    top: 0;
+    color: var(--clr-black);
+    letter-spacing: .01rem;
+    transform: translateY(.3rem) scaleX(200%);
+}
+
+.banner-border-3 {
+    position: absolute;
+    top: 0;
+    color: var(--clr-black);
+    letter-spacing: .01rem;
+    transform: translateY(.23rem) scaleX(200%);
+}
+
+.banner-border-2 {
+    position: absolute;
+    top: 0;
+    color: var(--clr-black);
+    letter-spacing: .01rem;
+    transform: translateY(.15rem) scaleX(200%);
+}
+
+.banner-border-1 {
+    position: absolute;
+    top: 0;
+    color: var(--clr-black);
+    letter-spacing: .01rem;
+    transform: translateY(.07rem) scaleX(200%);
+}
+
+.banner-text {
+    color: var(--clr-gray100);
+    transform: scaleX(200%);
 }
 
 .hamburger-button {
@@ -44,7 +92,7 @@ header {
 .hamburger-button .bar {
     width: 35px;
     height: 4px;
-    background-color: var(--accent);
+    background-color: var(--clr-primary);
     display: block;
     margin: 8px auto;
     transition: all 0.4s ease-in-out;
@@ -67,16 +115,36 @@ header {
 
 .hamburger-nav {
     display: block;
+    background-color: var(--clr-gray200);
+    border: 2px solid var(--clr-gray400);
+    z-index: 9999;
+}
+
+.hamburger-nav ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.hamburger-nav li {
+    font-size: 2rem;
+    background-color: var(--clr-gray200);
+    border-color: var(--clr-primary-dark);
+    color: var(--clr-gray100);
+}
+
+.hamburger-nav li:hover {
+    background-color: var(--clr-primary-hover);
+    color: var(--clr-gray400);
+}
+
+.hamburger-nav a {
+    display: block;
+    padding: .5rem;
 }
 
 nav.is-active {
     right: 0;
-}
-
-nav ul {
-	padding: 0;
-	margin: 0;
-	list-style: none;
 }
 
 .grid-cell {
@@ -86,8 +154,12 @@ nav ul {
     padding: 1rem;
 }
 
+.grid-cell p {
+    opacity: 1.0;
+}
+
 .grid-cell:hover p {
-    opacity: 0.10;
+    opacity: 0.05;
 }
 
 .main-grid .grid-2x1 {
@@ -105,32 +177,26 @@ nav ul {
 
 #vancouver-housing-prices-soar {
     background-image: url(../images/overhead-shot-of-vancouver-houses-600x300.jpeg);
-    background-color: red;
 }
 
 #canada-day-celebrations {
     background-image: url(../images/canada-day-celebrations-600x300.jpeg);
-    background-color: magenta;
 }
 
 #football-gaffe {
     background-image: url(../images/football-gaffe-300x600.jpeg);
-    background-color: green;
 }
 
 #stressed-out-student {
     background-image: url(../images/stressed-out-student-300x600.jpeg);
-    background-color: aqua;    
 }
 
 #obamas-back {
     background-image: url(../images/obama-speaking-300x300.jpeg);
-    background-color: blue;
 }
 
 #vancouvers-rainy-weather {
     background-image: url(../images/vancouver-rain-300x300.jpeg);
-    background-color: yellow;
 }
 
 @media (min-width: 20em) {
@@ -151,8 +217,6 @@ nav ul {
         right: -100%;
         top: 60px;
         transition: all 0.4s ease-in-out;
-        background-color: var(--secondary-button);
-        border: 2px solid var(--primary-button);
     }
 
     .main-grid {
