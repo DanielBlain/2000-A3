@@ -184,9 +184,9 @@ footer {
 	align-items: center;
 	background-color: rgba(169 161 161 / 56%);
 }
-.svg-group svg:not(:last-child) {
-	margin-right: 5px;
-	margin-left: 5px; /* Adjust the value to control the spacing */
+.svg-group svg:not(:first-child) {
+	margin-right: 2px;
+	margin-left: 1px; /* Adjusting the size for logos */
 }
 .svg-group .icon1 {
 	fill: rgb(0, 92, 212);
