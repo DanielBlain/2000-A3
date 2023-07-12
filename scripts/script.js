@@ -31,9 +31,11 @@ const weather = {
     currentObject: '',
     displayOnLoad: function(day) {
         displayWeather(day);
+        // calls function displayWeather using parameter day.
     },
     determineDay: function(index){
         this.displayOnLoad(weekdays[index]);
+        // calls method displayOnLoad using variable index as the array index for object weekdays.
     },
 }
 
