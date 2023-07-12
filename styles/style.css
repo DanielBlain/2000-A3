@@ -5,10 +5,10 @@
 	--secondary-button: rgb(0, 108, 0);
 	--accent: magenta;
 	/*Adding some variables in for me - cam */
-	--clr-primary: #304ffe;
-	--clr-primary-hover: #29e6a7;
-	--clr-primary-dark: #039d69;
-	--clr-gray100: #f0f7f8;
+	--clr--primary: #304ffe;
+	--clr--primary-hover: #29e6a7;
+	--clr--primary-dark: #039d69;
+	--clr--gray100: #f0f7f8;
 	--clr--gray200: #cfd8dc;
 	--clr--gray400: #6b7e86;
 	--clr--red100: rgb(255, 17, 0);
@@ -53,7 +53,7 @@ footer {
 	transition: border 200ms ease-in, box-shadow 200ms ease-in;
 	&:hover {
 		border: 1px solid var(--clr-primary);
-		box-shadow: 8px 8px var(--clr--red100);
+		box-shadow: 8px 8px var(--clr--primary-hover);
 	}
 }
 .grid-item-5 {
@@ -69,7 +69,7 @@ footer {
 	transition: border 200ms ease-in, box-shadow 200ms ease-in;
 	&:hover {
 		border: 1px solid var(--clr-primary);
-		box-shadow: 8px 8px var(--clr--red100);
+		box-shadow: 8px 8px var(--clr--primary-hover);
 	}
 }
 .grid-item-3 {
@@ -86,7 +86,7 @@ footer {
 	transition: border 200ms ease-in, box-shadow 200ms ease-in;
 	&:hover {
 		border: 1px solid var(--clr-primary);
-		box-shadow: 8px 8px var(--clr--red100);
+		box-shadow: 8px 8px var(--clr--primary-hover);
 	}
 }
 .grid-item-2 {
@@ -103,7 +103,7 @@ footer {
 	transition: border 200ms ease-in, box-shadow 200ms ease-in;
 	&:hover {
 		border: 1px solid var(--clr-primary);
-		box-shadow: 8px 8px var(--clr--red100);
+		box-shadow: 8px 8px var(--clr--primary-hover);
 	}
 }
 /*down below is what i used for the arrow animation*/
@@ -111,7 +111,7 @@ footer {
 .main-grid a {
 	padding: 1rem;
 	font-weight: bold;
-	color: var(--clr-primary);
+	color: var(--clr--primary);
 
 	&::after {
 		content: '\f061';
@@ -168,7 +168,7 @@ footer {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
-	background-color: rgba(169 161 161 / 56%);
+	background-color: rgba(223, 216, 216, 0.74);
 }
 .arts {
 	text-align: center;
@@ -182,7 +182,7 @@ footer {
 	flex-direction: row;
 	flex-wrap: wrap;
 	align-items: center;
-	background-color: rgba(169 161 161 / 56%);
+	background-color:  rgba(223, 216, 216, 0.74);
 }
 .svg-group svg:not(:first-child) {
 	margin-right: 2px;
@@ -234,6 +234,7 @@ a:link {
 	.grid-item-5 {
 		grid-column: 1;
 	}
+	
 }
 /*making b bold size bigger*/
 b {
