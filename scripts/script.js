@@ -93,7 +93,7 @@ function weekDisplay(array) {
                 });
                 $(this).hover(
                     function() {
-                        $(this).css('background-color', 'var(--clr--gray200)');
+                        $(this).css('background-color', 'var(--clr-gray200)');
                     }, 
                     function() {
                         $(this).css('background-color', 'var(--clr-gray100)');

@@ -8,8 +8,9 @@
     --clr-primary-hover: #29E6A7;
     --clr-primary-dark: #039D69;
     --clr-gray100: #F0F7F8;
-    --clr--gray200: #CFD8DC;
-    --clr--gray400: #6B7E86;
+    --clr-gray200: #CFD8DC;
+    --clr-gray400: #6B7E86;
+    --clr-black: black;
     /*border raiuds-cam*/
     --radius: 0.2rem;
 }
@@ -99,7 +100,7 @@ footer {
 }
 
 .degree-active {
-    background-color: var(--clr--gray200);
+    background-color: var(--clr-gray200);
 }
 
 .degree-inactive{
