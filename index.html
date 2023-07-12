@@ -1,91 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Link styles 
     <link rel="stylesheet" href="styles/normalize-d.css">
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
-    
-
-    <!-- -
     <title>Some News Sites</title>
 </head>
-
+<!--
 <body>
-
+    
     <header>
+
         <!-- Dan 
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus enim error in minima possimus, quae asperiores
         quia non ipsum voluptates vel voluptate atque, beatae consectetur perspiciatis! Laboriosam quibusdam omnis
         corrupti.
+        <!-- Dan -->
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus enim error in minima possimus, quae asperiores quia non ipsum voluptates vel voluptate atque, beatae consectetur perspiciatis! Laboriosam quibusdam omnis corrupti.
     </header>
 
-    <main>
-        <div class="main-grid">
-            <h2>In case you missed it</h2>
-            <div class="grid-item-5" >
-        <img class="card-imgage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRseiMYN_FUumgInB1a8lfVrag9epKbnNjeKQ&usqp=CAU"
-            alt="place holder">
-        <h2 class="card-title">The Current Real Estate Market</h2>
-        <p class="card-description"> Thinking of purchasing a home? get the latest real estate marke insight from our own
-        </p>
-        <a href="#" class="card-link">Read full Article </a>
-            </div>
-            <div class="grid-item-4">
-            <div class="grid-item-1" style="">
-                <img class="card-imgage"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/NBC_News_Control_Room_Show_Logos_%2850245773423%29.jpg/800px-NBC_News_Control_Room_Show_Logos_%2850245773423%29.jpg?20200823063925" alt="place holder">
-                <h2 class="card-title">Understanding the Gig Economy: Pros and Cons for Workers</h2>
-                <p class="card-description"> Thinking of purchasing a home? get the latest real estate marke insight from our own
-                </p>
-                <a href="#" class="card-link">Read full Article </a>
-            </div>
-            </div>
-            <div class="grid-item-3">
-            <div class="grid-item-1" style="">
-                <img class="card-imgage"
-                    src="https://www.publicdomainpictures.net/pictures/290000/velka/world-news-free-illustration.jpg" alt="place holder">
-                <h2 class="card-title">The Science Behind Habit Formation and How to Break Bad Habits</h2>
-                <p class="card-description"> Thinking of purchasing a home? get the latest real estate marke insight from our own
-                </p>
-                <a href="#" class="card-link">Read full Article </a>
-            </div>
-            </div>
-            <div class="grid-item-2">
-            <img class="card-imgage" src="https://media.istockphoto.com/id/1386838824/photo/digitally-generated-crypto-currency-and-exchange-stock-chart-for-finance-and-economy-based.jpg?s=2048x2048&w=is&k=20&c=PJvt6agBup10tjotKZauEV2LmBKOnstUrTse8kWUvrM="
-                alt="place holder">
-            <h2 class="card-title">The Art of Effective Negotiation in Business and Everyday Life</h2>
-            <p class="card-description"> Thinking of purchasing a home? get the latest real estate marke insight from our own
-            </p>
-            <a href="#" class="card-link">Read full Article </a>
-            </div>
-            
-            <div class="grid-item-1" style="">
-                <h2 class="card-title">Join the Conversation: Share Your Thoughts in Our Forum!</h2>
-           
-            <form action="#" method="post">
-                <fieldset>
-                    <legend> User Info</legend>
-                    <label class="visually-hidden" for="username"></label>
-                    <input placeholder="Name.." type="text" name="username" id="Name" required pattern="[a-zA-Z0-9]+"
-                        title="Username can only contain alpha-numeric characters"
-                        aria-label="Username containing only alpha-numeric characters">
-                    <label class="visually-hidden" for="email"></label>
-                    <input placeholder="Email..." type="email" name="" value="" id="email" required>
-
-                </fieldset>
-                    <label for="comments">Comments</label>
-                    <textarea name="comments" id="comments" cols="40" rows="6"></textarea>
-                    </fieldset>
-                    
-                    <input type="submit" value="Submit" class="button">
-                    <input type="reset" value="Clear Form" class="sumbit">
-            </div>
+    <main class="main-grid">
+        <div style="background-color: red">
+            a;lsdkfj;alsdfja
         </div>
+        <div style="background-color: green">
+            a;lsdkfj;alsdfja
+        </div>
+        <div style="background-color: blue">
+            a;lsdkfj;alsdfja
+        </div>
+        <div style="background-color: aqua">
+            a;lsdkfj;alsdfja
+        </div>
+        <div class="weather-panel">
+            <div class="weather-card">
+                <p class="capitalize weekday">sunday</p>
+                <div class="weather-image-wrapper"><img class="weather-image"src="images/sunny.svg" alt="sunny" width="120px"></div>
+                <div class="weather-info">
+                    <p class="capitalize">precipitation: <span id="precipitation">10</span>%</p>
+                    <div class="temperature">
+                        <p>18</p>
+                        <button class="capitalize celsius degree-active">&deg;c</button>
+                        <button class="capitalize fahrenheit degree-inactive">&deg;f</button>
+                    </div>
+                </div>
+            </div>
+            <div class="weekday-menu expanded">
+                <div class="weather-tab monday">
+                    <p class="capitalize">monday</p>
+                    <img src="images/sunny.svg" width="50px" alt="sunny">
+                </div>
+                <div class="weather-tab tuesday">
+                    <p class="capitalize">tuesday</p>
+                    <img src="images/sunny.svg" width="50px" alt="sunny">
+                </div>
+                <div class="weather-tab wednesday">
+                    <p class="capitalize">wednesday</p>
+                    <img src="images/sunny_cloudy.png" width="50px" alt="cloudy">
+                </div>
+                <div class="weather-tab thursday">
+                    <p class="capitalize">thursday</p>
+                    <img src="images/sunny.svg" width="50px" alt="sunny">
+                </div>
+                <div class="weather-tab friday">
+                    <p class="capitalize">friday</p>
+                    <img src="images/rainy.svg" width="50px" alt="rainy">
+                </div>
+                <div class="weather-tab saturday">
+                    <p class="capitalize">saturday</p>
+                    <img src="images/rainy.svg" width="50px" alt="rainy">
+                </div>
+                <div class="weather-tab sunday">
+                    <p class="capitalize">sunday</p>
+                    <img src="images/sunny.svg" width="50px" alt="sunny">
+                </div>
+                <div class="expand expanded"><img src="images/down_chevron.svg"></div>
+            </div>
+            <article class="trending">
+                <h3 class="capitalize">trending</h3>
+                <div class="trending-article">
+                    <p class="numbering">1</p>
+                    <a href="#" class="headline"><span class="capitalize">bank</span> of Canada raises its key interest rate to 5%</a>
+                    <p class="views">1658 views</p>
+                </div>
+                <div class="trending-article">
+                    <p class="numbering">2</p>
+                    <a href="#" class="headline"><span class="capitalize">after</span> repeated bylaw visits about basketball nets, this mom put up a sign</a>
+                    <p class="views">725 views</p>
+                </div>
+                <div class="trending-article">
+                    <p class="numbering">3</p>
+                    <a href="#" class="headline"><span class="capitalize">more</span>  than 1,000 Canadians take CRA to court over pandemic payments — and some win</a>
+                    <p class="views">239 views</p>
+                </div>
+            </article>
+        </div>
+
 
 
 
@@ -134,6 +145,8 @@
 
 
 
+
+
     </main>
 
     <footer>
@@ -142,22 +155,19 @@
         
         -
         <div class="footer-left">
-            <p><b>Some news Site</b></p>
+            Lorem ipsum dolor, sit 
         </div>
-
-        <div class="footer-right">
-
-            <p>&copy;555 Seymour St, Vancouver Bc V6B 3H6</p>
-
-        </div>
+        
     </footer>
 
     <!-- Link jQuery 
     <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js"
         integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+    <!-- Link jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+
 
     <!-- Link my script -->
     <script src="./scripts/script.js"></script>
 </body>
-
 </html>
