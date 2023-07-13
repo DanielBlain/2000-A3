@@ -12,7 +12,6 @@ class Weekday {
     }
 }
 
-
 const monday = new Weekday("monday", "sunny", 0, 26);
 const tuesday = new Weekday("tuesday", "sunny", 0, 26);
 const wednesday = new Weekday("wednesday", "cloudy", 10, 22);
@@ -38,37 +37,6 @@ const weather = {
         // calls method displayOnLoad using variable index as the array index for object weekdays.
     },
 }
-
-weather.determineDay(index);
-$('.weekday-menu').removeClass('expanded');
-$('.expand').removeClass('expanded');
-weekDisplay(weekOrder());
-
-$('.celsius').on('click', () => {
-    weather.degrees = 'celsius';
-    unitConversion(weather.currentObject);
-    if ($('.celsius').hasClass('degree-inactive') === true) {
-        $('.celsius').toggleClass("degree-active degree-inactive");
-        $('.fahrenheit').toggleClass("degree-active degree-inactive");
-    }
-});
-
-$('.fahrenheit').on('click', () => {
-    weather.degrees = 'fahrenheit';
-    unitConversion(weather.currentObject);
-    if ($('.fahrenheit').hasClass('degree-inactive') === true) {
-        $('.celsius').toggleClass("degree-active degree-inactive");
-        $('.fahrenheit').toggleClass("degree-active degree-inactive");
-    }
-});
-
-$('.expand').on('click', () => {
-    if ($('.expand').hasClass('expanded') === true) {
-        weather.determineDay(index);
-    }
-    $('.weekday-menu, .expand').toggleClass('expanded');
-});
-
 
 function weekOrder() {
     let order = weekdays;
@@ -131,3 +99,40 @@ function unitConversion(object) {
         weather.temperature.text(fahrenheit);
     }
 }
+
+$(() => {
+    weather.determineDay(index);
+    $('.weekday-menu').removeClass('expanded');
+    $('.expand').removeClass('expanded');
+    weekDisplay(weekOrder());
+    
+    $('.celsius').on('click', () => {
+        weather.degrees = 'celsius';
+        unitConversion(weather.currentObject);
+        if ($('.celsius').hasClass('degree-inactive') === true) {
+            $('.celsius').toggleClass("degree-active degree-inactive");
+            $('.fahrenheit').toggleClass("degree-active degree-inactive");
+        }
+    });
+    
+    $('.fahrenheit').on('click', () => {
+        weather.degrees = 'fahrenheit';
+        unitConversion(weather.currentObject);
+        if ($('.fahrenheit').hasClass('degree-inactive') === true) {
+            $('.celsius').toggleClass("degree-active degree-inactive");
+            $('.fahrenheit').toggleClass("degree-active degree-inactive");
+        }
+    });
+    
+    $('.expand').on('click', () => {
+        if ($('.expand').hasClass('expanded') === true) {
+            weather.determineDay(index);
+        }
+        $('.weekday-menu, .expand').toggleClass('expanded');
+    });
+
+    $(".hamburger-button").on("click", function() {
+        $(".hamburger-button .bar").toggleClass("is-active");
+        $(".hamburger-nav").toggleClass("is-active");
+    });
+})
