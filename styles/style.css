@@ -144,6 +144,20 @@ a[href^="./financial"] h2::before {
     grid-row-end: span 2;
 }
 
+.main-grid a {
+    padding: 1rem;
+    font-weight: bold;
+    color: var(--clr-primary);
+
+    &::after {
+        content: '\f061';
+        font-family: 'Font Awesome 5 free';
+        font-weight: 900;
+        position: relative;
+        left: 0.5rem;
+    }
+}
+
 .grid-cell {
     background-position: center;
     background-repeat: no-repeat;
@@ -275,7 +289,7 @@ nav.is-active {
 	transition: border 200ms ease-in, box-shadow 200ms ease-in;
 	&:hover {
 		border: 1px solid var(--clr-primary);
-		box-shadow: 8px 8px var(--clr--primary-hover);
+		box-shadow: 8px 8px var(--clr-primary-hover);
 	}
 }
 
