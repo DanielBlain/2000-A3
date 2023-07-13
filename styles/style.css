@@ -1,3 +1,11 @@
+/* font-family: 'DM Sans', sans-serif;
+font-family: 'DM Serif Display', serif; */
+* {
+    box-sizing: border-box;
+}
+
+
+
 :root {
     --background-color: white;
     --primary-button: green;
@@ -15,7 +23,10 @@
 }
 
 body {
-    background-color: var(--clr-gray100);
+    background-color: var(--clr-gray200);
+    font-family: 'DM Sans', sans-serif;
+    color: var(--clr-black);
+    font-size: clamp(0.5rem, 0.4000rem + 0.5000vw, 1rem);
 }
 
 header {
@@ -24,18 +35,25 @@ header {
     flex-direction: column;
     justify-content: space-between;
     position: relative; /* To allow positioning of children */
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 100;
 }
 
 .header-left {
-    padding-top: 5px;
-    margin: 0 auto;
+    padding: 5px 0 10px 0;
+    margin: 0 35% 0 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .header-left img {
     width: 48px;
     height: 48px;
 }
+
 
 footer {
     display: flex;
@@ -51,11 +69,12 @@ footer {
     font-weight: bold;
 }
 
-a {
-    text-decoration: none;
+h1, h2, h3 {
+    font-family: 'DM Serif Display', serif;
 }
-a:link {
-	text-decoration: none !important;
+
+a[href="#"]{
+    text-decoration: none;
 }
 
 h2 {
@@ -76,20 +95,20 @@ h3 {
 
 h2,
 h3,
-p,
 ul {
     margin: 0;
     background-color: var(--clr-gray100);
-    border-radius: var(--radius);
 }
+
+ul {
+    list-style-type: none;
+}
+
 
 p {
     padding-top: .4rem;
 }
 
-p ~ p {
-    background-color: var(--clr-gray200);
-}
 
 .hover-picture a > *:not(h2) {
     opacity: 1.0;
@@ -129,8 +148,8 @@ a[href^="./financial"] h2::before {
 .main-grid {
     margin: 10px 0;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: minmax(300px, auto);
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: auto;
     grid-auto-flow: dense;
     grid-gap: 1.5rem;
     justify-content: center;
@@ -147,8 +166,14 @@ a[href^="./financial"] h2::before {
 .main-grid a {
     padding: 1rem;
     font-weight: bold;
-    color: var(--clr-primary);
+    color: var(--clr-black);
+}
 
+.main-grid>* {
+    margin: 0 5px 5px 5px;
+}
+
+.card-link {
     &::after {
         content: '\f061';
         font-family: 'Font Awesome 5 free';
@@ -158,46 +183,78 @@ a[href^="./financial"] h2::before {
     }
 }
 
+.card-description + .card-link {
+    background-color: var(--background-color);
+}
+
 .grid-cell {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     padding: .4rem;
+    border-radius: var(--radius);
+    width: 100%;
 }
 
 .grid-cell > a {
     padding: 1rem;
 }
 
+.grid-cell h3 {
+    padding: 5px 0 5px 1rem;
+}
 
+
+.grid-cell p {
+    padding: 1rem;
+    margin: 0;
+    background-color: var(--clr-gray100);
+}
+
+.grid-cell ul {
+    padding-bottom: 1rem;
+}
+
+.grid-cell li {
+    padding: 10px 0;
+}
+
+.grid-cell :first-child {
+    border-radius: var(--radius) var(--radius) 0 0;
+    padding: 10px 0;
+}
+
+.grid-cell a:hover :first-child {
+    border-radius: var(--radius);
+}
+
+.grid-cell :last-child {
+    border-radius: 0 0 var(--radius) var(--radius);
+}
 
 /**********************************************************
  * Banner, Hamburger button, Nav popup menu
  *
 **/
 
-.mini-banner {
-    margin: 0 auto;
-    font-size: 2rem;
-    color: var(--clr-gray100);
-}
+
 
 .banner-block {
-    display: none;
+    padding: 10px 0 10px 0;
+    display: flex;
+    justify-content: center;
 }
 
 .banner-block > * {
-    position: absolute;
-    top: 14px;
-    right: 14px;
-    font-size: 1.2rem;
     color: var(--clr-black);
-    transform-origin: right;
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.5rem;
+    text-shadow: 2.5px 3px black, 2.5px 2.5px black, 2.5px 2px black, 2.5px 1.5px black, 2.5px 1px black, 2.5px 0.5px black;
 }
 
 .banner-block .banner-text {
     color: var(--clr-gray100);
-    transform: scaleX(200%);
+    transform: scaleX(170%);
 }
 
 .banner-border-1 {transform: scaleX(200%) translateY(.07rem);}
@@ -222,21 +279,22 @@ a[href^="./financial"] h2::before {
 }
 
 .hamburger-button .bar:nth-child(1).is-active {
-    transform: rotate(-15deg);
+    transform: rotate(-10deg);
     transform-origin: 100% 50%;
 }
 
 .hamburger-button .bar:nth-child(2).is-active {
-    transform: rotate(-15deg) translate(-4px);
+    transform: rotate(-10deg) translate(-4px);
     transform-origin: 120% 50%;
 }
 
 .hamburger-button .bar:nth-child(3).is-active {
-    transform: rotate(-15deg) translate(-8px);
+    transform: rotate(-10deg) translate(-8px);
     transform-origin: 140% 50%;
 }
 
 nav.is-active {
+    top: 70px;
     right: 0;
 }
 
@@ -244,13 +302,16 @@ nav.is-active {
     display: block;
     background-color: var(--clr-gray200);
     border: 2px solid var(--clr-gray400);
-    z-index: 9999;
 }
 
 .hamburger-nav ul {
 	padding: 0;
 	margin: 0;
-	list-style: none;
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    gap: 50px;
+    background-color: var(--clr-gray400);
 }
 
 .hamburger-nav li {
@@ -258,6 +319,9 @@ nav.is-active {
     background-color: var(--clr-gray200);
     border-color: var(--clr-primary-dark);
     color: var(--clr-gray100);
+    padding: 0 2rem 0 2rem;
+    border-radius: var(--radius);
+    font-family: 'DM Serif Display', serif;
 }
 
 .hamburger-nav li:hover {
@@ -269,8 +333,12 @@ nav.is-active {
     display: block;
     padding: .5rem;
     text-align: center;
+    color: var(--clr-primary);
 }
 
+.hamburger-nav a:visited {
+    color: var(--clr-primary);
+}
 
 
 /**********************************************************
@@ -280,23 +348,44 @@ nav.is-active {
 
 .grid-item {
 	overflow: hidden;
-	border: 1px solid var(--clr--gray200);
-	box-shadow: 4px 4px var(--clr--gray200);
+	border: 1px solid var(--clr-gray200);
+    background-color: var(--background-color);
+	box-shadow: 4px 4px var(--clr-gray400);
+    margin-top: 10px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	cursor: pointer;
 	transition: border 200ms ease-in, box-shadow 200ms ease-in;
+    width: 275px;
 	&:hover {
 		border: 1px solid var(--clr-primary);
 		box-shadow: 8px 8px var(--clr-primary-hover);
 	}
+    
+}
+
+.grid-item form {
+    padding: 1.5rem;
+}
+
+img ~ * {
+    background-color: var(--background-color);
+}
+
+
+.card-link:hover {
+    text-decoration: underline;
 }
 
 .card-link {
-	&:hover::after {
+    &:hover::after {
 		animation: arrow 1s ease-in-out infinite alternate;
 	}
+}
+
+.grid-item .card-link {
+    color: var(--clr-primary);
 }
 
 @keyframes arrow {
@@ -324,8 +413,15 @@ nav.is-active {
 }
 
 .card {
-	display: flex;
-	flex-wrap: wrap;
+    padding-right: 1rem;
+    grid-column: 5/6;
+    grid-row: 3/4;
+    font-size: 1.4rem;
+    margin-top: 10px;
+}
+
+.card ul {
+    padding: 1rem;
 }
 
 .card a {
@@ -372,6 +468,10 @@ nav.is-active {
  *
 **/
 
+.zero h2 {
+    background-color: inherit;
+}
+
 .zero li {
     list-style-type: none;
 }
@@ -379,7 +479,7 @@ nav.is-active {
 .zero a {
 	padding: 1rem;
 	font-weight: bold;
-	color: var(--clr--primary);
+	color: var(--clr-primary);
 
 	&::after {
 		content: '\f061';
@@ -430,11 +530,10 @@ nav.is-active {
  *
 **/
 .weather-panel {
-    background-color: var(--background-color);
     position: relative;
     bottom: 10px;
-    grid-column: 1 / 2;
-    grid-row-end: span 3;
+    grid-column: 1/2; 
+    grid-row: 1/2;
 }
 
 .weather-card {
@@ -452,6 +551,10 @@ nav.is-active {
 
 .weather-card div {
     width: 80%;
+}
+
+.weather-card p {
+    background-color: inherit;
 }
 
 .weekday {
@@ -480,7 +583,7 @@ nav.is-active {
 
 .temperature p{
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 2rem;
     display: inline;
     margin:0 10px 0 0;
 }
@@ -534,8 +637,9 @@ nav.is-active {
 }
 
 .weather-tab p {
-    font-size: 2rem;
+    font-size: clamp(0.75rem, 0.7000rem + 0.2500vw, 1rem);
     margin:0 0 0 20px;
+    background-color: inherit;
 }
 
 .weather-tab img {
@@ -559,14 +663,22 @@ nav.is-active {
     text-transform: capitalize;
 }
 
-.trending {
+.weekday-menu + .trending {
     position: absolute;
-    top: 370px;
+    top: 365px;
+    left: 10px;
+    padding: 10px 0 0 10px;
+    background-color: var(--background-color);
+    border-radius: var(--radius);
+}
+
+.trending > * {
+    background-color: inherit;
 }
 
 .trending h3 {
-    font-size: 1.3rem;
-    margin: 0 0 0 5px;
+    font-size: 1rem;
+    margin: 0 0 10px 5px;
 }
 
 .trending-article {
@@ -574,18 +686,20 @@ nav.is-active {
     grid-template-columns: 30px repeat(2, 1fr);
     grid-template-rows: 1fr 0.5fr;
     border-bottom: solid 1px black;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .trending-article p,
 .trending-article a {
     margin: 0 20px 10px 5px;
+    background-color: inherit;
+    padding: 0;
 }
 
 .trending .numbering {
     grid-row: 1/3;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 0.9000rem + 0.5000vw, 1.5rem);
     margin: 5px 5px 10px 7px;
 }
 
@@ -594,18 +708,17 @@ nav.is-active {
     grid-column: 2/4;
     margin-top: 5px;
     color: var(--text-color);
-    text-decoration: none;
 }
 
-.trending .headline:hover {
-    text-decoration: underline;
-}
 
 .trending .views {
     color: var(--clr-gray400);
 }
 
-
+.grid-item:last-of-type {
+    grid-column: 4/5;
+    grid-row: 3/4;
+}
 
 /**********************************************************
  * Above Footer
@@ -621,13 +734,17 @@ nav.is-active {
 }
 
 
+a:visited {
+    color: inherit;
+}
+
 
 /**********************************************************
  * Media Queries
  *
 **/
 
-@media (min-width: 20em) {
+/* @media (min-width: 320px) {
     header,
     footer {
         flex-direction: row;
@@ -642,23 +759,7 @@ nav.is-active {
         margin: 0;
     }
 
-    .mini-banner {
-        display: none;
-    }
-
-    .banner-block {
-        display: inline-block;
-    }
-
-    .banner-block > * {
-        top: 14px;
-        right: 50%;
-        transform-origin: left;
-    }
-
-    .hamburger-button {
-        display: inline-block;
-    }
+    
 
     .hamburger-nav {
         width: 12em;
@@ -679,52 +780,99 @@ nav.is-active {
     .main-grid .grid-1x2 {
         grid-row-end: span 2;
     }
-}
+} */
 
-@media (min-width: 30em) {
-    .banner-block > * {
-        top: 6px;
-        font-size: 2rem;
-    }
-}
-
-@media (min-width: 40em) {
-    .banner-block > * {
-        top: 0;
-        font-size: 3rem;
+@media (max-width: 480px) {
+    /* header {
+        position: fixed;
+        z-index: 105;
     }
 
     .main-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr;
+    }
+    .hamburger-nav {
+        position: absolute;
+        width: 12rem;
+        right: -1000px;
+        top: 60px;
+        transition: all 0.4s ease-in-out;
+    }
+    .hamburger-button {
+        display: inline-block;
+    }
+    
+
+    .banner-block {
+        display: inline-block;
     }
 
-    .card {
-		align-items: center;
-		display: flex;
-		flex-flow: row-reverse;
-	}
+    .banner-block > * {
+        top: 14px;
+        right: 50%;
+        transform-origin: left;
+    } */
+    
 }
 
-@media (min-width: 60em) {
-	.main-grid {
+@media (min-width: 768px) {
+	/* .main-grid {
 		grid-template-columns: repeat(4, 1fr);
 	}
 
 	.card a {
-		align-items: center;
-		justify-content: center;
-	}
+		
+	} */
 }
 
-@media (min-width: 80em) {
+
+@media (max-width: 1024px) {
     .main-grid {
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
-@media (min-width: 100em) {
+@media (max-width: 1200px) {
     .main-grid {
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(min(200px,100%), 1fr));
+        grid-template-rows: 70px repeat(4, 1fr);
+    }
+    .hamburger-nav {
+        position: absolute;
+        width: 12rem;
+        right: -1000px;
+        top: 70px;
+        transition: all 0.4s ease-in-out;
+    }
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    .hamburger-nav ul {
+        flex-direction: column;
+        gap: 0;
+
+    }
+    .hamburger-nav li {
+        padding: 0;
+        border-radius: 0;
+    }
+    .hamburger-button {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 5px;
+    }
+    .weather-panel {
+        grid-row: 2/3;
+    }
+    .grid-item:first-of-type {
+        grid-column: 2/3;
+    }
+    .grid-2x1 {
+        grid-column-start: 2;
     }
 }
 
