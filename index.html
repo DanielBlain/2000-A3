@@ -21,8 +21,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=DM+Serif+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
-    <!-- -->
-    <title>Some News Sites</title>
 </head>
 <body>
     
@@ -71,13 +69,10 @@
 
     <main>
         <div class="main-grid">
-            <!-------------------------------------------------
-                Weather Panel            
-            -->
             <div class="weather-panel">
                 <div class="weather-card">
                     <p class="capitalize weekday">sunday</p>
-                    <div class="weather-image-wrapper"><img class="weather-image"src="images/sunny.svg" alt="sunny" width="120px"></div>
+                    <div class="weather-image-wrapper"><img class="weather-image" src="images/sunny.svg" alt="sunny" width="120"></div>
                     <div class="weather-info">
                         <p class="capitalize">precipitation: <span id="precipitation">10</span>%</p>
                         <div class="temperature">
@@ -90,57 +85,57 @@
                 <div class="weekday-menu expanded">
                     <div class="weather-tab monday">
                         <p class="capitalize">monday</p>
-                        <img src="images/sunny.svg" width="50px" alt="sunny">
+                        <img src="images/sunny.svg" width="50" alt="sunny">
                     </div>
                     <div class="weather-tab tuesday">
                         <p class="capitalize">tuesday</p>
-                        <img src="images/sunny.svg" width="50px" alt="sunny">
+                        <img src="images/sunny.svg" width="50" alt="sunny">
                     </div>
                     <div class="weather-tab wednesday">
                         <p class="capitalize">wednesday</p>
-                        <img src="images/sunny_cloudy.png" width="50px" alt="cloudy">
+                        <img src="images/sunny_cloudy.png" width="50" alt="cloudy">
                     </div>
                     <div class="weather-tab thursday">
                         <p class="capitalize">thursday</p>
-                        <img src="images/sunny.svg" width="50px" alt="sunny">
+                        <img src="images/sunny.svg" width="50" alt="sunny">
                     </div>
                     <div class="weather-tab friday">
                         <p class="capitalize">friday</p>
-                        <img src="images/rainy.svg" width="50px" alt="rainy">
+                        <img src="images/rainy.svg" width="50" alt="rainy">
                     </div>
                     <div class="weather-tab saturday">
                         <p class="capitalize">saturday</p>
-                        <img src="images/rainy.svg" width="50px" alt="rainy">
+                        <img src="images/rainy.svg" width="50" alt="rainy">
                     </div>
                     <div class="weather-tab sunday">
                         <p class="capitalize">sunday</p>
-                        <img src="images/sunny.svg" width="50px" alt="sunny">
+                        <img src="images/sunny.svg" width="50" alt="sunny">
                     </div>
-                    <div class="expand expanded"><img src="images/down_chevron.svg"></div>
+                    <div class="expand expanded"><img src="images/down_chevron.svg" alt="expand button"></div>
                 </div>
-                <article class="trending">
-                    <h3 class="capitalize">trending</h3>
-                    <div class="trending-article">
-                        <p class="numbering">1</p>
-                        <a href="#" class="headline card-link"><span class="capitalize">bank</span> of Canada raises its key interest rate to 5%</a>
-                        <p class="views">1658 views</p>
-                    </div>
-                    <div class="trending-article">
-                        <p class="numbering">2</p>
-                        <a href="#" class="headline card-link"><span class="capitalize">after</span> repeated bylaw visits about basketball nets, this mom put up a sign</a>
-                        <p class="views">725 views</p>
-                    </div>
-                    <div class="trending-article">
-                        <p class="numbering">3</p>
-                        <a href="#" class="headline card-link"><span class="capitalize">more</span>  than 1,000 Canadians take CRA to court over pandemic payments — and some win</a>
-                        <p class="views">239 views</p>
-                    </div>
-                </article>
             </div>
+            <article class="trending">
+                <h3 class="capitalize">trending</h3>
+                <div class="trending-article">
+                    <p class="numbering">1</p>
+                    <a href="#" class="headline card-link"><span class="capitalize">bank</span> of Canada raises its key interest rate to 5%</a>
+                    <p class="views">1658 views</p>
+                </div>
+                <div class="trending-article">
+                    <p class="numbering">2</p>
+                    <a href="#" class="headline card-link"><span class="capitalize">after</span> repeated bylaw visits about basketball nets, this mom put up a sign</a>
+                    <p class="views">725 views</p>
+                </div>
+                <div class="trending-article">
+                    <p class="numbering">3</p>
+                    <a href="#" class="headline card-link"><span class="capitalize">more</span>  than 1,000 Canadians take CRA to court over pandemic payments — and some win</a>
+                    <p class="views">239 views</p>
+                </div>
+            </article>
 
-            <!-------------------------------------------------
-                General Articles            
-            -->
+            
+                <!-- General Articles             -->
+            
             <article class="grid-2x1 grid-cell hover-picture" id="vancouver-housing-prices-soar">
                 <a href="#">
                     <h2>Housing Prices Soar In Vancouver</h2>
@@ -187,7 +182,7 @@
                     </p>
                 </a>
             </article>
-            <article class="grid-2x1 grid-cell hover-picture" id="vancouvers-rainy-weather">
+            <article class="grid-2x1 grid-cell hover-picture extra-content" id="vancouvers-rainy-weather">
                 <a href="#">
                     <h2>Next Up?<br>More Rain</h2>
                     <p>
@@ -199,7 +194,7 @@
                 </a>
             </article>
             <div class="grid-item" >
-                <img class="card-image extra-content" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRseiMYN_FUumgInB1a8lfVrag9epKbnNjeKQ&usqp=CAU"
+                <img class="card-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRseiMYN_FUumgInB1a8lfVrag9epKbnNjeKQ&usqp=CAU"
                 alt="place holder">
                 <h2 class="card-title">The Current Real Estate Market</h2>
                 <p class="card-description">
@@ -207,7 +202,7 @@
                 </p>
                 <a href="#" class="card-link">Read full Article </a>
             </div>
-            <div class="grid-item extra-content">
+            <div class="grid-item">
                 <img class="card-image"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/NBC_News_Control_Room_Show_Logos_%2850245773423%29.jpg/800px-NBC_News_Control_Room_Show_Logos_%2850245773423%29.jpg?20200823063925" alt="place holder">
                 <h2 class="card-title">Understanding the Gig Economy: Pros and Cons for Workers</h2>
@@ -216,7 +211,7 @@
                 </p>
                 <a href="#" class="card-link">Read full Article </a>
             </div>
-            <div class="grid-item">
+            <div class="grid-item extra-content">
                 <img class="card-image"
                 src="https://www.publicdomainpictures.net/pictures/290000/velka/world-news-free-illustration.jpg" alt="place holder">
                 <h2 class="card-title">The Science Behind Habit Formation and How to Break Bad Habits</h2>
@@ -233,7 +228,16 @@
                     Thinking of purchasing a home? get the latest real estate marke insight from our own
                 </p>
                 <a href="#" class="card-link">Read full Article</a>
-            </div>            
+            </div>
+            <div class="grid-item">
+                <img class="card-image" src="https://media.istockphoto.com/id/1386838824/photo/digitally-generated-crypto-currency-and-exchange-stock-chart-for-finance-and-economy-based.jpg?s=2048x2048&w=is&k=20&c=PJvt6agBup10tjotKZauEV2LmBKOnstUrTse8kWUvrM="
+                alt="place holder">
+                <h2 class="card-title">The Art of Effective Negotiation in Business and Everyday Life</h2>
+                <p class="card-description">
+                    Thinking of purchasing a home? get the latest real estate marke insight from our own
+                </p>
+                <a href="#" class="card-link">Read full Article</a>
+            </div>              
             <nav class="card">
                 <ul>
                     <li>
@@ -263,13 +267,13 @@
                         title="Username can only contain alpha-numeric characters"
                         aria-label="Username containing only alpha-numeric characters">
                         <label class="visually-hidden" for="email"></label>
-                        <input placeholder="Email..." type="email" name="" value="" id="email" required>
+                        <input placeholder="Email..." type="email" name="email" value="" id="email" required>
                     </fieldset>
                     <label for="comments">Comments</label><br>
-                    <textarea name="comments" id="comments" cols="70" rows="6"></textarea><br>
-                </fieldset>                
-                <input type="submit" value="Submit" class="button">
-                <input type="reset" value="Clear Form" class="submit">
+                    <textarea name="comments" id="comments" cols="70" rows="6"></textarea><br>               
+                    <input type="submit" value="Submit" class="button">
+                    <input type="reset" value="Clear Form" class="submit">
+                </form>
             </div>
         </div> <!-- end of grid -->
         
